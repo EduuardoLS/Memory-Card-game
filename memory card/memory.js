@@ -13,11 +13,11 @@ let firstcard = null;
 let secondcard = null;
 let lockboard = false;
 
-// Função de embaralhamento corrigida
+
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];  // Correção aqui
+        [array[i], array[j]] = [array[j], array[i]];  
     }
 }
 
@@ -28,7 +28,7 @@ function createboard() {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.dataset.icon = card;
-        cardElement.addEventListener('click', flipcard);  // Correção aqui
+        cardElement.addEventListener('click', flipcard);  
 
         gameBoard.appendChild(cardElement);
     });
